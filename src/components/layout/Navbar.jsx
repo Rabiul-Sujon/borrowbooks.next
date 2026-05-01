@@ -37,7 +37,7 @@ const Navbar = () => {
             </span>
             <button
               onClick={() => signOut()}
-              className="btn btn-error btn-sm text-white"
+              className="btn btn-error btn-md ml-4 text-lg font-semi-bold text-white"
             >
               Logout
             </button>
