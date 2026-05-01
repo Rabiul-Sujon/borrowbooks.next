@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "The Great Adventure",
+    "author": "James Carter",
+    "description": "A thrilling story of a young explorer who discovers a hidden world beneath the ocean, filled with mystery, danger, and unexpected friendships.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Whispers in the Dark",
+    "author": "Sophia Lane",
+    "description": "A gripping tale of a detective who unravels a decades-old mystery in a small town where everyone has something to hide.",
+    "category": "Story",
+    "available_quantity": 3,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780061096525-L.jpg"
+  },
+  {
+    "id": "3",
+    "title": "The Last Kingdom",
+    "author": "Robert Mills",
+    "description": "An epic historical story of a warrior fighting to reclaim his homeland from invaders in medieval England.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780007353453-L.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Echoes of Tomorrow",
+    "author": "Aisha Patel",
+    "description": "A heartwarming story about love, loss, and second chances set against the backdrop of a futuristic city.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780385737951-L.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A comprehensive guide to writing clean, maintainable, and efficient code that every software developer should read.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg"
+  },
+  {
+    "id": "6",
+    "title": "The Pragmatic Programmer",
+    "author": "David Thomas",
+    "description": "A classic tech book filled with practical advice for developers to improve their craft and build better software.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780201616224-L.jpg"
+  },
+  {
+    "id": "7",
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "description": "A deep dive into the core mechanisms of JavaScript that will change the way you think about the language.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781491924464-L.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "description": "An essential guide to building reliable, scalable, and maintainable systems using modern data engineering principles.",
+    "category": "Tech",
+    "available_quantity": 2,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781449373320-L.jpg"
+  },
+  {
+    "id": "9",
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An iconic science book that explores the universe, black holes, and the nature of time in a way everyone can understand.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg"
+  },
+  {
+    "id": "10",
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "A revolutionary science book that introduced the gene-centered view of evolution and changed how we understand life.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780198788607-L.jpg"
+  },
+  {
+    "id": "11",
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "A breathtaking journey through the universe exploring astronomy, physics, and the human desire to understand the cosmos.",
+    "category": "Science",
+    "available_quantity": 6,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780345331359-L.jpg"
+  },
+  {
+    "id": "12",
+    "title": "The Gene",
+    "author": "Siddhartha Mukherjee",
+    "description": "A fascinating exploration of the history and future of genetics, from Mendel's peas to CRISPR and beyond.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781476733524-L.jpg"
+  }
+]
