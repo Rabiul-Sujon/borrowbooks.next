@@ -15,17 +15,17 @@
     "description": "A gripping tale of a detective who unravels a decades-old mystery in a small town where everyone has something to hide.",
     "category": "Story",
     "available_quantity": 3,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780061096525-L.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780374533557-L.jpg"
   },
   {
     "id": "3",
-    "title": "The Last Kingdom",
-    "author": "Robert Mills",
-    "description": "An epic historical story of a warrior fighting to reclaim his homeland from invaders in medieval England.",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A magical story about a young shepherd named Santiago who travels from Spain to Egypt in search of treasure and discovers the meaning of life.",
     "category": "Story",
     "available_quantity": 7,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780007353453-L.jpg"
-  },
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg"
+   },
   {
     "id": "4",
     "title": "Echoes of Tomorrow",
