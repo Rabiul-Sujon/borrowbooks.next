@@ -3,9 +3,21 @@
 import Link from "next/link";
 import { useSession, signOut } from '@/lib/client'
 import { FaBookOpen } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { data: session, isPending } = useSession();
+
+  const handleLogout = async () => {
+    await signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          toast.success("Successfully logged out");
+          router.push("/");
+        },
+      },
+    });
+  };
 
   return (
     <nav className="navbar bg-base-100 shadow-md px-4 sticky top-0 z-50">
@@ -35,18 +47,18 @@ const Navbar = () => {
             <span className="font-medium hidden sm:block">
               {session.user.name}
             </span>
+            {/* Logout button */}
             <button
-              onClick={() => signOut()}
-              className="btn btn-error btn-md ml-4 text-lg font-semi-bold text-white"
-            >
+              onClick={handleLogout}
+              className="btn btn-error btn-md ml-4 text-lg font-semi-bold text-white">
               Logout
             </button>
-          </>
-        ) : (
+           </>
+          ) : (
           <Link href="/login" className="btn btn-primary btn-md px-6 text-white text-lg">
             Login
           </Link>
-        )}
+         )}
 
         {/* Mobile Menu */}
         <div className="dropdown dropdown-end lg:hidden">
