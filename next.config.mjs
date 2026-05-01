@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['covers.openlibrary.org','upload.wikimedia.org','randomuser.me'],
+    domains: ['covers.openlibrary.org','randomuser.me'],
   },
  
 };

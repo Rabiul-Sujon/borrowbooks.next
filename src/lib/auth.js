@@ -1,23 +1,34 @@
+import dns from 'dns'
+dns.setServers(['8.8.8.8', '8.8.4.4'])
+
+// Fix DNS resolution for MongoDB connection in Bangladesh
+dns.setDefaultResultOrder('ipv4first')
+
 import { betterAuth } from 'better-auth'
+import { MongoClient } from 'mongodb'
 import { mongodbAdapter } from 'better-auth/adapters/mongodb'
-import clientPromise from './mongodb'
 
-// Connect to mongoDB
-const client = await clientPromise;
-const db = client.db();
+const uri = process.env.MONGODB_URI
 
-// Configure betterAuth with mongoDB & social providers
+if (!uri) {
+  throw new Error('MONGODB_URI Not Found')
+}
+
+const client = new MongoClient(uri)
+const db = client.db('borrowbooks')
+
 export const auth = betterAuth({
-  database: mongodbAdapter(db),
-//email and password authentication
+  database: mongodbAdapter(db, {
+    disableTransactions: true,
+    client,
+  }),
   emailAndPassword: {
     enabled: true,
   },
-  //Google 0auth
   socialProviders: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     },
   },
-});
+})
