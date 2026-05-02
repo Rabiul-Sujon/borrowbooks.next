@@ -27,6 +27,10 @@
 //   },
 // });
 
+
+// -------------------------------------------------------------------
+
+
 // import { betterAuth } from "better-auth";
 // import { mongodbAdapter } from "better-auth/adapters/mongodb";
 // import clientPromise from "./mongodb";
@@ -45,6 +49,7 @@
 //     },
 //   },
 // });
+// --------------------------------------------------------------------------
 
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
