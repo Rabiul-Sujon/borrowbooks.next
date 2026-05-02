@@ -24,3 +24,37 @@
 // }
 
 // export default clientPromise;
+
+
+import dns from "node:dns/promises";
+import { MongoClient } from "mongodb";
+
+// ✅ Force IPv4 DNS resolution — fixes querySrv ECONNREFUSED
+dns.setDefaultResultOrder("ipv4first");
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+const uri = process.env.MONGODB_URI;
+
+const options = {
+  family: 4,
+  serverSelectionTimeoutMS: 10000,
+};
+
+if (!uri) {
+  throw new Error("Please add your MONGODB_URI to .env.local");
+}
+
+let clientPromise;
+
+if (process.env.NODE_ENV === "development") {
+  if (!global._mongoClientPromise) {
+    const client = new MongoClient(uri, options);
+    global._mongoClientPromise = client.connect();
+  }
+  clientPromise = global._mongoClientPromise;
+} else {
+  const client = new MongoClient(uri, options);
+  clientPromise = client.connect();
+}
+
+export default clientPromise;

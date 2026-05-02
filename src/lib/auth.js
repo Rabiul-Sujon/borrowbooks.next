@@ -1,27 +1,40 @@
-import dns from 'dns'
-dns.setServers(['8.8.8.8', '8.8.4.4'])
+// import { betterAuth } from "better-auth";
+// import { mongodbAdapter } from "better-auth/adapters/mongodb";
+// import { MongoClient } from "mongodb";
 
-// Fix DNS resolution for MongoDB connection in Bangladesh
-dns.setDefaultResultOrder('ipv4first')
+// // ✅ Cache the client promise to prevent multiple connections
+// const globalWithMongo = global;
 
-import { betterAuth } from 'better-auth'
-import { MongoClient } from 'mongodb'
-import { mongodbAdapter } from 'better-auth/adapters/mongodb'
+// if (!globalWithMongo._mongoClient) {
+//   globalWithMongo._mongoClient = new MongoClient(process.env.MONGODB_URI, {
+//     family: 4,
+//     serverSelectionTimeoutMS: 10000,
+//   }).connect();
+// }
 
-const uri = process.env.MONGODB_URI
+// const client = await globalWithMongo._mongoClient;
 
-if (!uri) {
-  throw new Error('MONGODB_URI Not Found')
-}
+// export const auth = betterAuth({
+//   database: mongodbAdapter(client.db("borrowbooks")),
+//   emailAndPassword: {
+//     enabled: true,
+//   },
+//   socialProviders: {
+//     google: {
+//       clientId: process.env.GOOGLE_CLIENT_ID,
+//       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+//     },
+//   },
+// });
 
-const client = new MongoClient(uri)
-const db = client.db('borrowbooks')
+import { betterAuth } from "better-auth";
+import { mongodbAdapter } from "better-auth/adapters/mongodb";
+import clientPromise from "./mongodb";
+
+const client = await clientPromise;
 
 export const auth = betterAuth({
-  database: mongodbAdapter(db, {
-    disableTransactions: true,
-    client,
-  }),
+  database: mongodbAdapter(client.db("borrowbooks")),
   emailAndPassword: {
     enabled: true,
   },
@@ -31,4 +44,4 @@ export const auth = betterAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     },
   },
-})
+});
