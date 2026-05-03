@@ -8,7 +8,7 @@ const quotes = [
     name: 'Albert Einstein',
     profession: 'Physicist',
     quote: 'The only thing that you absolutely have to know is the location of the library.',
-    image: '/images/einestain.jfif',
+    image: '/images/einestain.png',
   },
   {
     id: 2,
