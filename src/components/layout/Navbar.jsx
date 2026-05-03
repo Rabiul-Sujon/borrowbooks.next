@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSession, signOut } from '@/lib/client'
 import { FaBookOpen } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const { data: session, isPending } = useSession();
@@ -18,6 +19,8 @@ const Navbar = () => {
       },
     });
   };
+
+  const router = useRouter();
 
   return (
     <nav className="navbar bg-base-100 shadow-md px-4 sticky top-0 z-50">
